@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SKPlayerView">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="445"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4VL-kv-Kir">
+                    <rect key="frame" x="0.0" y="0.0" width="354" height="445"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="60f-mX-PK9">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="ASn-cT-suc"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="OD6-hT-5zf"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4P-VE-INu">
+                    <rect key="frame" x="10" y="405" width="54" height="30"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="back:" destination="iN0-l3-epB" eventType="touchUpInside" id="8RV-So-hfG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxJ-rx-NvP">
+                    <rect key="frame" x="74" y="405" width="54" height="30"/>
+                    <state key="normal" title="保存">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="save:" destination="iN0-l3-epB" eventType="touchUpInside" id="mIT-wH-pfb"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyl-hV-vae">
+                    <rect key="frame" x="156" y="30" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Z4P-VE-INu" secondAttribute="bottom" constant="10" id="9nf-cM-ome"/>
+                <constraint firstAttribute="bottom" secondItem="4VL-kv-Kir" secondAttribute="bottom" id="FWQ-Mx-7gb"/>
+                <constraint firstAttribute="bottom" secondItem="IxJ-rx-NvP" secondAttribute="bottom" constant="10" id="Jjy-wj-tJM"/>
+                <constraint firstItem="4VL-kv-Kir" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MvS-xh-WZz"/>
+                <constraint firstItem="4VL-kv-Kir" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Tqa-8F-awM"/>
+                <constraint firstItem="Z4P-VE-INu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="bph-Aw-L4F"/>
+                <constraint firstItem="IxJ-rx-NvP" firstAttribute="width" secondItem="Z4P-VE-INu" secondAttribute="width" id="gbj-cu-Ieb"/>
+                <constraint firstAttribute="centerX" secondItem="dyl-hV-vae" secondAttribute="centerX" id="m2p-cx-RGa"/>
+                <constraint firstItem="IxJ-rx-NvP" firstAttribute="leading" secondItem="Z4P-VE-INu" secondAttribute="trailing" constant="10" id="oeZ-xg-lUJ"/>
+                <constraint firstAttribute="centerX" secondItem="IxJ-rx-NvP" secondAttribute="centerX" constant="76" id="q4u-Yf-hrO"/>
+                <constraint firstItem="dyl-hV-vae" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="xIh-IA-gZG"/>
+                <constraint firstAttribute="trailing" secondItem="4VL-kv-Kir" secondAttribute="trailing" id="zIh-PY-yZl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="countLabel" destination="dyl-hV-vae" id="wHq-3K-sZD"/>
+                <outlet property="photoCellLayout" destination="60f-mX-PK9" id="Gi3-y7-KUa"/>
+                <outlet property="photoPlayerCollectionview" destination="4VL-kv-Kir" id="LYi-iu-aZ6"/>
+            </connections>
+            <point key="canvasLocation" x="347" y="80.5"/>
+        </view>
+    </objects>
+</document>
